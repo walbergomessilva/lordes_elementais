@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Zodíaco</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 80%; margin: auto; text-align: center; padding-top: 50px; }
+        .field { margin-bottom: 10px; }
+        input { padding: 10px; width: 100%; max-width: 300px; margin: 10px auto; }
+        button { padding: 10px 20px; background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Cadastro</h2>
+        <div class="field">
+            <input type="email" id="register-email" placeholder="Email" required>
+        </div>
+        <div class="field">
+            <input type="password" id="register-password" placeholder="Senha" required>
+        </div>
+        <div class="field">
+            <input type="password" id="register-password-confirm" placeholder="Confirme a Senha" required>
+        </div>
+        <button onclick="register()">Cadastrar</button>
+        <p>Já tem uma conta? <a href="login.html">Login</a></p>
+    </div>
+
+    <script>
+        function register() {
+            const email = document.getElementById('register-email').value;
+            const password = document.getElementById('register-password').value;
+            const confirmPassword = document.getElementById('register-password-confirm').value;
+
+            if (password !== confirmPassword) {
+                alert('As senhas não coincidem!');
+                return;
+            }
+
+            if (email && password) {
+                alert('Cadastro bem-sucedido!');
+                // Redirecionar para a página de login
+                window.location.href = "login.html";
+            } else {
+                alert('Por favor, preencha todos os campos!');
+            }
+        }
+    </script>
+
+</body>
+</html>

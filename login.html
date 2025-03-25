@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Zodíaco</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 80%; margin: auto; text-align: center; padding-top: 50px; }
+        .field { margin-bottom: 10px; }
+        input { padding: 10px; width: 100%; max-width: 300px; margin: 10px auto; }
+        button { padding: 10px 20px; background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Login</h2>
+        <div class="field">
+            <input type="email" id="login-email" placeholder="Email" required>
+        </div>
+        <div class="field">
+            <input type="password" id="login-password" placeholder="Senha" required>
+        </div>
+        <button onclick="login()">Entrar</button>
+        <p>Ainda não tem uma conta? <a href="register.html">Cadastrar</a></p>
+    </div>
+
+    <script>
+        function login() {
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+
+            // Lógica de autenticação aqui
+            if (email && password) {
+                alert('Login bem-sucedido!');
+                // Redirecionar para a página da ficha de RPG
+                window.location.href = "ficha.html";
+            } else {
+                alert('Por favor, preencha os campos!');
+            }
+        }
+    </script>
+
+</body>
+</html>
