@@ -167,5 +167,124 @@
                 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.26.0/dist/supabase.min.js"></script>
 
+                <script>
+        // Substitua pelos seus próprios detalhes do Supabase
+        const supabaseUrl = 'https://waucxamcigbaolwdyfpz.supabase.co'; // Substitua pela sua URL
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndhdWN4YW1jaWdiYW9sd2R5ZnB6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI5MTY1MDMsImV4cCI6MjA1ODQ5MjUwM30.upnFuCH1jsYuwnh5BJMtvUJfjT0-WkHK4b-C5Xwq_EI'; // Substitua pela sua chave
+        const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+
+        // Função para salvar os dados no Supabase
+        async function saveFicha() {
+            const nivel = document.getElementById('nivel').value;
+            const arma = document.getElementById('arma').value;
+            const nome = document.getElementById('nome').value;
+            const idade = document.getElementById('idade').value;
+            const pais = document.getElementById('pais').value;
+            const etnia = document.getElementById('etnia').value;
+            const corOlhos = document.getElementById('cor_olhos').value;
+            const corCabelos = document.getElementById('cor_cabelos').value;
+            const altura = document.getElementById('altura').value;
+            const peso = document.getElementById('peso').value;
+            const profissao = document.getElementById('profissao').value;
+            const hobby = document.getElementById('hobby').value;
+            const classe = document.getElementById('classe').value;
+            const zodiaco = document.getElementById('zodiaco').value;
+            const dom = document.getElementById('dom').value;
+            const personalidade = document.getElementById('personalidade').value;
+            const vitalidade = document.getElementById('vitalidade').value;
+            const aura = document.getElementById('aura').value;
+            const mana = document.getElementById('mana').value;
+            const agilidade = document.getElementById('agilidade').value;
+            const reflexo = document.getElementById('reflexo').value;
+            const forca = document.getElementById('forca').value;
+            const destreza = document.getElementById('destreza').value;
+            const defesa = document.getElementById('defesa').value;
+            const resistencia = document.getElementById('resistencia').value;
+            const academicos = document.getElementById('academicos').value;
+            const sabedoria = document.getElementById('sabedoria').value;
+            const logica = document.getElementById('logica').value;
+            const memoria = document.getElementById('memoria').value;
+            const percepcao = document.getElementById('percepcao').value;
+            const concentracao = document.getElementById('concentracao').value;
+            const armaZ = document.getElementById('arma_z').value;
+            const sensibilidade = document.getElementById('sensibilidade').value;
+            const escudoZ = document.getElementById('escudo_z').value;
+            const desMagica = document.getElementById('des_magica').value;
+            const transformacao = document.getElementById('transformacao').value;
+            const aparencia = document.getElementById('aparencia').value;
+            const carisma = document.getElementById('carisma').value;
+            const labia = document.getElementById('labia').value;
+            const recursos = document.getElementById('recursos').value;
+            const reputacao = document.getElementById('reputacao').value;
+            const carater = document.getElementById('carater').value;
+            const periciasEspecificas = document.getElementById('pericias_especificas').value;
+            const vantagens = document.getElementById('Vantagens').value;
+            const desvantagens = document.getElementById('Desvantagens').value;
+            const bau = document.getElementById('bau').value;
+            const skills = document.getElementById('skills').value;
+
+            // Enviar os dados para o Supabase
+            const { data, error } = await supabase
+                .from('fichas')  // Substitua 'fichas' pelo nome da tabela no Supabase
+                .insert([
+                    {
+                        nivel,
+                        arma,
+                        nome,
+                        idade,
+                        pais,
+                        etnia,
+                        cor_olhos: corOlhos,
+                        cor_cabelos: corCabelos,
+                        altura,
+                        peso,
+                        profissao,
+                        hobby,
+                        classe,
+                        zodiaco,
+                        dom,
+                        personalidade,
+                        vitalidade,
+                        aura,
+                        mana,
+                        agilidade,
+                        reflexo,
+                        forca,
+                        destreza,
+                        defesa,
+                        resistencia,
+                        academicos,
+                        sabedoria,
+                        logica,
+                        memoria,
+                        percepcao,
+                        concentracao,
+                        arma_z: armaZ,
+                        sensibilidade,
+                        escudo_z: escudoZ,
+                        des_magica: desMagica,
+                        transformacao,
+                        aparencia,
+                        carisma,
+                        labia,
+                        recursos,
+                        reputacao,
+                        carater,
+                        pericias_especificas: periciasEspecificas,
+                        vantagens,
+                        desvantagens,
+                        bau,
+                        skills
+                    }
+                ]);
+
+            if (error) {
+                alert('Erro ao salvar ficha: ' + error.message);
+            } else {
+                alert('Ficha salva com sucesso!');
+            }
+        }
+    </script>
+       
 </body>
 </html>
