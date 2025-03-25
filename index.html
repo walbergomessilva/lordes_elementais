@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de RPG</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 80%; margin: auto; }
+        .field { margin-bottom: 10px; }
+        .checkbox-group { display: flex; flex-wrap: wrap; }
+        .checkbox-group label { margin-right: 10px; }
+        .skill-group { display: grid; grid-template-columns: repeat(2, 1fr); gap: 5px; }
+        .skill-group label { display: flex; align-items: center; }
+        textarea { width: 100%; height: 120px; }
+        .full-page { margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+        <div class="container">
+            <h1>Ficha de RPG - Zodíacos</h1>
+            <div class="field">
+                <label>Nível: <input type="text" id="nivel"></label>
+                <label>Arma: <input type="text" id="arma"></label>
+            </div>
+            <div class="field">
+                <label>Nome: <input type="text" id="nome"></label>
+                <label>Idade: <input type="number" id="idade"></label>
+                <label>País: <input type="text" id="pais"></label>
+            </div>
+            <div class="field">
+                <label>Etnia: <input type="text" id="etnia"></label>
+                <label>Cor dos Olhos: <input type="text" id="cor_olhos"></label>
+                <label>Cor do Cabelo: <input type="text" id="cor_cabelos"></label>
+            </div>
+                <div class="field">
+                <label>Altura: <input type="text" id="altura"></label>
+                <label>Peso: <input type="text" id="peso"></label>
+            </div>
+            <div class="field">
+                <label>Profissão: <input type="text" id="profissao"></label>
+                <label>Hobby: <input type="text" id="hobby"></label>
+            </div>
+            <div class="field">
+                <label>Classe: <input type="text" id="classe"></label>
+                <label>Zodíaco: <input type="text" id="zodiaco"></label>
+                <label>Dom: <input type="text" id="dom"></label>
+            </div>
+            <div class="field">
+                <label>Personalidade:</label>
+                <textarea id="personalidade" rows="3"></textarea>
+            </div>
+            
+            <h2>Status</h2>
+            <div class="field">
+                <label>Vitalidade: <input type="text" id="vitalidade"></label>
+                <label>Aura: <input type="text" id="aura"></label>
+                <label>Mana: <input type="text" id="mana"></label>
+            </div>
+            
+            <h2>Atributos</h2>
+<h3>Físicos</h3>
+<div class="field">
+    <div class="row">
+        <label>Agilidade: 1+<input type="number" id="agilidade" min="0" value="0"></label>
+        <label>Reflexo: 1+<input type="number" id="reflexo" min="0" value="0"></label>
+        <label>Força: 1+<input type="number" id="forca" min="0" value="0"></label>
+    </div>
+    <div class="row">
+        <label>Destreza: 1+<input type="number" id="destreza" min="0" value="0"></label>
+        <label>Defesa: 1+<input type="number" id="defesa" min="0" value="0"></label>
+        <label>Resistência: 1+<input type="number" id="resistencia" min="0" value="0"></label>
+    </div>
+</div>
+
+            <h3>Mentais</h3>
+            <div class="field">
+                <div class="row">
+                <label>Acadêmicos: 1+<input type="number" id="academicos" min="0" value="0"></label>
+                <label>Sabedoria: 1+<input type="number" id="sabedoria" min="0" value="0"></label>
+                <label>Lógica: 1+<input type="number" id="logica" min="0" value="0"></label>
+            </div>
+                <div class="row">
+                <label>Memória: 1+<input type="number" id="memoria" min="0" value="0"></label>
+                <label>Percepção: 1+<input type="number" id="percepcao" min="0" value="0"></label>
+                <label>Concentração: 1+<input type="number" id="concentracao" min="0" value="0"></label>
+            </div>
+            <h3>Arma</h3>
+            <div class="field">
+                <div class="row">
+                <label>Dom: 1+<input type="number" id="dom" min="0" value="0"></label>
+                <label>Arma Z: 1+<input type="number" id="arma_z" min="0" value="0"></label>
+                <label>Sensibilidade: 1+<input type="number" id="sensibilidade" min="0" value="0"></label>
+            </div>
+            <div class="row">    
+                <label>Escudo Z: +<input type="number" id="escudo_z" min="0" value="0"></label>
+                <label>Des. Mágica: 1+<input type="number" id="des_magica" min="0" value="0"></label>
+                <label>Transformação: 1+<input type="number" id="transformacao" min="0" value="0"></label>
+            </div>
+            <h3>Sociais</h3>
+            <div class="field">
+                <div class="row">
+                <label>Aparência: 1+<input type="number" id="aparencia" min="0" value="0"></label>
+                <label>Carisma: 1+<input type="number" id="carisma" min="0" value="0"></label>
+                <label>Lábia: 1+<input type="number" id="labia" min="0" value="0"></label>
+            </div>
+            <div class="row">
+            <label>Recursos: 1+<input type="number" id="recursos" min="0" value="0"></label>
+                <label>Reputação: 1+<input type="number" id="reputacao" min="0" value="0"></label>
+                <label>Caráter: 1+<input type="number" id="carater" min="0" value="0"></label>
+            </div>
+        <h2>Perícias Específicas</h2>
+        <textarea id="pericias_especificas" rows="5"></textarea>
+    
+        <div class="centralizado">
+            <h2>Perícias Cotidianas</h2>
+            <div class="skill-group">
+                <label>Artes Marciais: <input type="checkbox"> <input type="checkbox"> <input type="checkbox"></label>
+                <label>Atuação: <input type="checkbox"> <input type="checkbox"> <input type="checkbox"></label>
+                <label>Armas Brancas: <input type="checkbox"> <input type="checkbox"> <input type="checkbox"></label>
+                <label>Armas de fogo: <input type="checkbox"> <input type="checkbox"> <input type="checkbox"></label>
+                <label>Diplomacia: <input type="checkbox"> <input type="checkbox"> <input type="checkbox"></label>
+                <label>Idiomas: <input type="checkbox"> <input type="checkbox"> <input type="checkbox"></label>
+                <label>Ciências Naturais: <input type="checkbox"> <input type="checkbox"> <input type="checkbox"></label>
+                <label>Informática: <input type="checkbox"> <input type="checkbox"> <input type="checkbox"></label>
+                <label>Religião: <input type="checkbox"> <input type="checkbox"> <input type="checkbox"></label>
+                <label>Política: <input type="checkbox"> <input type="checkbox"> <input type="checkbox"></label>
+                <label>Condução: <input type="checkbox"> <input type="checkbox"> <input type="checkbox"></label>
+                <label>Montaria: <input type="checkbox"> <input type="checkbox"> <input type="checkbox"></label>
+                <label>Natação: <input type="checkbox"> <input type="checkbox"> <input type="checkbox"></label>
+                <label>Sobrevivência: <input type="checkbox"> <input type="checkbox"> <input type="checkbox"></label>
+                <label>Navegação: <input type="checkbox"> <input type="checkbox"> <input type="checkbox"></label>
+                <label>Artesanato: <input type="checkbox"> <input type="checkbox"> <input type="checkbox"></label>
+                <label>Mecânica: <input type="checkbox"> <input type="checkbox"> <input type="checkbox"></label>
+                <label>Mineração: <input type="checkbox"> <input type="checkbox"> <input type="checkbox"></label>
+                <label>Etiqueta: <input type="checkbox"> <input type="checkbox"> <input type="checkbox"></label>
+                <label>Culinária: <input type="checkbox"> <input type="checkbox"> <input type="checkbox"></label>
+                <label>Furtar: <input type="checkbox"> <input type="checkbox"> <input type="checkbox"></label>
+                <label>Jogos: <input type="checkbox"> <input type="checkbox"> <input type="checkbox"></label>
+            </div>
+    
+            <h2>Vantagens/ Méritos</h2>
+            <textarea id="Vantagens"></textarea>
+    
+            <h2>Desvantagens/Deméritos</h2>
+            <textarea id="Desvantagens"></textarea>
+    
+            <h2>Baú</h2>
+            <textarea id="bau"></textarea>
+        </div>
+    
+
+    <div class="container full-page">
+        <h1>Skills</h1>
+        <textarea id="skills" style="height: 400px;"></textarea>
+    </div>
+</body>
+</html>
