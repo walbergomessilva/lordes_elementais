@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ficha de RPG</title>
+    <title>Zodíaco</title>
+    <link rel="icon" href="favicon.png" type="image/png">
     <style>
         body { font-family: Arial, sans-serif; }
         .container { width: 80%; margin: auto; }
@@ -18,6 +19,14 @@
 </head>
 <body>
 
+    <div id="auth-container">
+        <h2>Login</h2>
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Senha">
+        <button onclick="login()">Entrar</button>
+        <button onclick="register()">Cadastrar</button>
+    </div>
+    
         <div class="container">
             <h1>Ficha de RPG - Zodíacos</h1>
             <div class="field">
@@ -155,5 +164,14 @@
         <h1>Skills</h1>
         <textarea id="skills" style="height: 400px;"></textarea>
     </div>
+
+    <div class="row">
+    <button onclick="saveFicha()">Salvar Ficha</button>
+    </div>
+
+    <footer>
+        <p>&copy; Lordes Elementais® Licenced by Luís Alukard®</p>
+    </footer>
+
 </body>
 </html>
