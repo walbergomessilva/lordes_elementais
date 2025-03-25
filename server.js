@@ -63,6 +63,26 @@ app.get('/session', async (req, res) => {
     }
 
     res.json(data);
+
+    const saveFicha = async () => {
+  const { data, error } = await supabase
+    .from('fichas')
+    .upsert([
+      {
+        user_id: user.id,  // ID do usuário autenticado
+        campo1: valor1,
+        campo2: valor2,
+        // ... (outros campos da ficha)
+      }
+    ]);
+
+  if (error) {
+    console.error('Erro ao salvar ficha:', error);
+  } else {
+    console.log('Ficha salva com sucesso:', data);
+  }
+};
+
 });
 
 const PORT = 3001;
