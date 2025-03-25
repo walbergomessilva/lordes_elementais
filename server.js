@@ -8,7 +8,7 @@ app.use(express.json());
 
 // Usar variáveis de ambiente para credenciais de segurança
 const supabaseUrl = process.env.SUPABASE_URL || 'https://waucxamcigbaolwdyfpz.supabase.co';
-const supabaseKey = process.env.SUPABASE_KEY || 'sua_chave_aqui';
+const supabaseKey = process.env.SUPABASE_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndhdWN4YW1jaWdiYW9sd2R5ZnB6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI5MTY1MDMsImV4cCI6MjA1ODQ5MjUwM30.upnFuCH1jsYuwnh5BJMtvUJfjT0-WkHK4b-C5Xwq_EI';
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 // Rota de cadastro
